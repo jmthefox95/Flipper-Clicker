@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 public class ClickerScript : MonoBehaviour
 
 {
+    public Animator anim;
     public TextMeshProUGUI coinTotalText;
     private int coinCount = 0;
 
@@ -25,11 +26,11 @@ public class ClickerScript : MonoBehaviour
     {
         coinTotalText.text = "Coins: " + coinCount;
 
-        AutoClick();
+        //AutoClick();
 
         if (Input.GetMouseButtonDown(0))
         {
-            Click();
+            //Click();
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) 
@@ -59,5 +60,6 @@ public class ClickerScript : MonoBehaviour
     public void Click()
     {
         coinCount++;
+        anim.SetTrigger("Flip");
     }
 }
