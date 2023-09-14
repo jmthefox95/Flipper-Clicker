@@ -12,13 +12,20 @@ public class ClickerScript : MonoBehaviour
     public TextMeshProUGUI coinTotalText;
     private int coinCount = 0;
 
+    public double coinUpgradeAmountText;
+    public int coinUpgradeAmount;
+
+    public double coinUpgradeCost;
+    public int coinAmountAdd;
+
 
     private float timeElasped;
     public float delay = 5; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        coinAmountAdd = 0;
+        coinUpgradeCost = 0;
     }
 
     // Update is called once per frame
@@ -62,4 +69,6 @@ public class ClickerScript : MonoBehaviour
         coinCount++;
         anim.SetTrigger("Flip");
     }
+
+
 }
